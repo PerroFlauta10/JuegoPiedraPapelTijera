@@ -14,6 +14,8 @@ namespace JuegoPiedra
     public partial class Form1 : Form
     {
         Random random = new Random();
+        int contadorVictorias = 0;
+        int juegosJugados = 0;
 
         public Form1()
         {
@@ -23,9 +25,38 @@ namespace JuegoPiedra
         private void Jugar_Click(object sender, EventArgs e)
         {
             Juego.Visible = true;
-           
         }
 
+        #region Botones
+        private void Piedra_Click(object sender, EventArgs e)
+        {
+            picturePapel1.Visible = false;
+            pictureTijera1.Visible = false;
+            picturePiedra1.Visible = true;
+            MostrarImagenAleatoria();
+            ComprobarVictoria();
+        }
+
+        private void Papel_Click(object sender, EventArgs e)
+        {
+            picturePiedra1.Visible = false;
+            pictureTijera1.Visible = false;
+            picturePapel1.Visible = true;
+            MostrarImagenAleatoria();
+            ComprobarVictoria();
+        }
+
+        private void Tijeras_Click(object sender, EventArgs e)
+        {
+            picturePiedra1.Visible = false;
+            picturePapel1.Visible = false;
+            pictureTijera1.Visible = true;
+            MostrarImagenAleatoria();
+            ComprobarVictoria();
+        }
+        #endregion
+
+        #region JugadorAleatorio
         private void MostrarImagenAleatoria()
         {
             // Ocultar todas las imágenes primero
@@ -50,34 +81,9 @@ namespace JuegoPiedra
                     break;
             }
         }
+        #endregion JugadorAleatorio
 
-        private void Piedra_Click(object sender, EventArgs e)
-        {
-            picturePapel1.Visible = false;
-            pictureTijera1.Visible = false; 
-            picturePiedra1.Visible = true;
-            MostrarImagenAleatoria();
-            ComprobarVictoria();
-        }
-
-        private void Papel_Click(object sender, EventArgs e)
-        {
-            picturePiedra1.Visible = false;
-            pictureTijera1.Visible = false;
-            picturePapel1.Visible = true;
-            MostrarImagenAleatoria();
-            ComprobarVictoria();
-        }
-
-        private void Tijeras_Click(object sender, EventArgs e)
-        {
-            picturePiedra1.Visible = false;
-            picturePapel1.Visible = false;
-            pictureTijera1.Visible = true;
-            MostrarImagenAleatoria();
-            ComprobarVictoria();
-        }
-
+        #region Victorias
         private void ComprobarVictoria()
         {
             // Comprobar si el jugador ha ganado
@@ -85,7 +91,9 @@ namespace JuegoPiedra
                 picturePapel1.Visible && picturePiedra.Visible ||
                 pictureTijera1.Visible && picturePapel.Visible)
             {
+                contadorVictorias++;
                 MessageBox.Show("¡Has ganado!");
+               
             }
             // Comprobar si el jugador ha perdido
             else if (picturePiedra1.Visible && picturePapel.Visible ||
@@ -93,12 +101,43 @@ namespace JuegoPiedra
                      pictureTijera1.Visible && picturePiedra.Visible)
             {
                 MessageBox.Show("¡Has perdido!");
+                
             }
             // Comprobar si hay empate
             else
             {
                 MessageBox.Show("¡Empate!");
+                
+            }
+
+            juegosJugados++;
+            MessageBox.Show("Puntuacion : " + contadorVictorias +"/"+juegosJugados);
+
+            // Ocultar todas las imágenes
+            picturePiedra1.Visible = false;
+            picturePapel1.Visible = false;
+            pictureTijera1.Visible = false;
+            picturePiedra.Visible = false;
+            picturePapel.Visible = false;
+            pictureTijera.Visible = false;
+
+            // Comprobar si se han jugado tres juegos
+            if (juegosJugados == 3)
+            {
+                if (contadorVictorias >= 2)
+                {
+                    MessageBox.Show("¡Has ganado la serie!");
+                }
+                else
+                {
+                    MessageBox.Show("¡Has perdido la serie!");
+                }
+
+                // Reiniciar contadores
+                contadorVictorias = 0;
+                juegosJugados = 0;
             }
         }
+        #endregion Victorias
     }
 }

@@ -33,21 +33,23 @@
             this.Papel = new System.Windows.Forms.Button();
             this.Tijeras = new System.Windows.Forms.Button();
             this.Juego = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Jugador = new System.Windows.Forms.Label();
             this.picturePapel1 = new System.Windows.Forms.PictureBox();
             this.pictureTijera1 = new System.Windows.Forms.PictureBox();
             this.picturePiedra1 = new System.Windows.Forms.PictureBox();
             this.pictureTijera = new System.Windows.Forms.PictureBox();
             this.picturePiedra = new System.Windows.Forms.PictureBox();
             this.picturePapel = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Ramdon = new System.Windows.Forms.Label();
             this.Juego.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePapel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTijera1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePiedra1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTijera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePiedra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePapel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Jugar
@@ -97,6 +99,8 @@
             // Juego
             // 
             this.Juego.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Juego.Controls.Add(this.Ramdon);
+            this.Juego.Controls.Add(this.Jugador);
             this.Juego.Controls.Add(this.picturePapel1);
             this.Juego.Controls.Add(this.pictureTijera1);
             this.Juego.Controls.Add(this.picturePiedra1);
@@ -113,6 +117,85 @@
             this.Juego.TabIndex = 2;
             this.Juego.Visible = false;
             // 
+            // Jugador
+            // 
+            this.Jugador.AutoSize = true;
+            this.Jugador.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Jugador.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Jugador.ForeColor = System.Drawing.Color.White;
+            this.Jugador.Location = new System.Drawing.Point(585, 528);
+            this.Jugador.Name = "Jugador";
+            this.Jugador.Size = new System.Drawing.Size(267, 48);
+            this.Jugador.TabIndex = 9;
+            this.Jugador.Text = "Este eres tu!! ";
+            this.Jugador.Visible = false;
+            // 
+            // picturePapel1
+            // 
+            this.picturePapel1.Image = global::JuegoPiedra.Properties.Resources.Papel12;
+            this.picturePapel1.Location = new System.Drawing.Point(555, 162);
+            this.picturePapel1.Name = "picturePapel1";
+            this.picturePapel1.Size = new System.Drawing.Size(324, 363);
+            this.picturePapel1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePapel1.TabIndex = 8;
+            this.picturePapel1.TabStop = false;
+            this.picturePapel1.Visible = false;
+            // 
+            // pictureTijera1
+            // 
+            this.pictureTijera1.Image = global::JuegoPiedra.Properties.Resources.Tijera1;
+            this.pictureTijera1.Location = new System.Drawing.Point(555, 162);
+            this.pictureTijera1.Name = "pictureTijera1";
+            this.pictureTijera1.Size = new System.Drawing.Size(324, 363);
+            this.pictureTijera1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureTijera1.TabIndex = 7;
+            this.pictureTijera1.TabStop = false;
+            this.pictureTijera1.Visible = false;
+            // 
+            // picturePiedra1
+            // 
+            this.picturePiedra1.Image = global::JuegoPiedra.Properties.Resources.Piedra1;
+            this.picturePiedra1.Location = new System.Drawing.Point(555, 162);
+            this.picturePiedra1.Name = "picturePiedra1";
+            this.picturePiedra1.Size = new System.Drawing.Size(324, 363);
+            this.picturePiedra1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePiedra1.TabIndex = 6;
+            this.picturePiedra1.TabStop = false;
+            this.picturePiedra1.Visible = false;
+            // 
+            // pictureTijera
+            // 
+            this.pictureTijera.Image = global::JuegoPiedra.Properties.Resources.Tijera;
+            this.pictureTijera.Location = new System.Drawing.Point(82, 61);
+            this.pictureTijera.Name = "pictureTijera";
+            this.pictureTijera.Size = new System.Drawing.Size(324, 363);
+            this.pictureTijera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureTijera.TabIndex = 5;
+            this.pictureTijera.TabStop = false;
+            this.pictureTijera.Visible = false;
+            // 
+            // picturePiedra
+            // 
+            this.picturePiedra.Image = global::JuegoPiedra.Properties.Resources.Piedra;
+            this.picturePiedra.Location = new System.Drawing.Point(82, 61);
+            this.picturePiedra.Name = "picturePiedra";
+            this.picturePiedra.Size = new System.Drawing.Size(324, 363);
+            this.picturePiedra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePiedra.TabIndex = 4;
+            this.picturePiedra.TabStop = false;
+            this.picturePiedra.Visible = false;
+            // 
+            // picturePapel
+            // 
+            this.picturePapel.Image = global::JuegoPiedra.Properties.Resources.Papel;
+            this.picturePapel.Location = new System.Drawing.Point(82, 61);
+            this.picturePapel.Name = "picturePapel";
+            this.picturePapel.Size = new System.Drawing.Size(324, 363);
+            this.picturePapel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePapel.TabIndex = 3;
+            this.picturePapel.TabStop = false;
+            this.picturePapel.Visible = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -124,71 +207,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // picturePapel1
+            // Ramdon
             // 
-            this.picturePapel1.Image = global::JuegoPiedra.Properties.Resources.Papel12;
-            this.picturePapel1.Location = new System.Drawing.Point(555, 202);
-            this.picturePapel1.Name = "picturePapel1";
-            this.picturePapel1.Size = new System.Drawing.Size(324, 363);
-            this.picturePapel1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePapel1.TabIndex = 8;
-            this.picturePapel1.TabStop = false;
-            this.picturePapel1.Visible = false;
-            // 
-            // pictureTijera1
-            // 
-            this.pictureTijera1.Image = global::JuegoPiedra.Properties.Resources.Tijera1;
-            this.pictureTijera1.Location = new System.Drawing.Point(555, 202);
-            this.pictureTijera1.Name = "pictureTijera1";
-            this.pictureTijera1.Size = new System.Drawing.Size(324, 363);
-            this.pictureTijera1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureTijera1.TabIndex = 7;
-            this.pictureTijera1.TabStop = false;
-            this.pictureTijera1.Visible = false;
-            // 
-            // picturePiedra1
-            // 
-            this.picturePiedra1.Image = global::JuegoPiedra.Properties.Resources.Piedra1;
-            this.picturePiedra1.Location = new System.Drawing.Point(555, 202);
-            this.picturePiedra1.Name = "picturePiedra1";
-            this.picturePiedra1.Size = new System.Drawing.Size(324, 363);
-            this.picturePiedra1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePiedra1.TabIndex = 6;
-            this.picturePiedra1.TabStop = false;
-            this.picturePiedra1.Visible = false;
-            // 
-            // pictureTijera
-            // 
-            this.pictureTijera.Image = global::JuegoPiedra.Properties.Resources.Tijera;
-            this.pictureTijera.Location = new System.Drawing.Point(82, 37);
-            this.pictureTijera.Name = "pictureTijera";
-            this.pictureTijera.Size = new System.Drawing.Size(324, 363);
-            this.pictureTijera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureTijera.TabIndex = 5;
-            this.pictureTijera.TabStop = false;
-            this.pictureTijera.Visible = false;
-            // 
-            // picturePiedra
-            // 
-            this.picturePiedra.Image = global::JuegoPiedra.Properties.Resources.Piedra;
-            this.picturePiedra.Location = new System.Drawing.Point(82, 37);
-            this.picturePiedra.Name = "picturePiedra";
-            this.picturePiedra.Size = new System.Drawing.Size(324, 363);
-            this.picturePiedra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePiedra.TabIndex = 4;
-            this.picturePiedra.TabStop = false;
-            this.picturePiedra.Visible = false;
-            // 
-            // picturePapel
-            // 
-            this.picturePapel.Image = global::JuegoPiedra.Properties.Resources.Papel;
-            this.picturePapel.Location = new System.Drawing.Point(82, 37);
-            this.picturePapel.Name = "picturePapel";
-            this.picturePapel.Size = new System.Drawing.Size(324, 363);
-            this.picturePapel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePapel.TabIndex = 3;
-            this.picturePapel.TabStop = false;
-            this.picturePapel.Visible = false;
+            this.Ramdon.AutoSize = true;
+            this.Ramdon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ramdon.ForeColor = System.Drawing.Color.White;
+            this.Ramdon.Location = new System.Drawing.Point(80, 12);
+            this.Ramdon.Name = "Ramdon";
+            this.Ramdon.Size = new System.Drawing.Size(326, 46);
+            this.Ramdon.TabIndex = 10;
+            this.Ramdon.Text = "Jugador Ramdon";
+            this.Ramdon.Visible = false;
             // 
             // Form1
             // 
@@ -199,15 +228,17 @@
             this.Controls.Add(this.Jugar);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Piedra Papel Tijera";
             this.Juego.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Juego.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePapel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTijera1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePiedra1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTijera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePiedra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePapel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,6 +257,8 @@
         private System.Windows.Forms.PictureBox pictureTijera1;
         private System.Windows.Forms.PictureBox picturePapel1;
         private System.Windows.Forms.Panel Juego;
+        private System.Windows.Forms.Label Jugador;
+        private System.Windows.Forms.Label Ramdon;
     }
 }
 
