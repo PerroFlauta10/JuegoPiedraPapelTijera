@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Jugar = new System.Windows.Forms.Button();
             this.Piedra = new System.Windows.Forms.Button();
             this.Papel = new System.Windows.Forms.Button();
             this.Tijeras = new System.Windows.Forms.Button();
             this.Juego = new System.Windows.Forms.Panel();
+            this.Ramdon = new System.Windows.Forms.Label();
             this.Jugador = new System.Windows.Forms.Label();
             this.picturePapel1 = new System.Windows.Forms.PictureBox();
             this.pictureTijera1 = new System.Windows.Forms.PictureBox();
@@ -41,7 +43,6 @@
             this.picturePiedra = new System.Windows.Forms.PictureBox();
             this.picturePapel = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Ramdon = new System.Windows.Forms.Label();
             this.Juego.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePapel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTijera1)).BeginInit();
@@ -116,6 +117,18 @@
             this.Juego.Size = new System.Drawing.Size(976, 696);
             this.Juego.TabIndex = 2;
             this.Juego.Visible = false;
+            // 
+            // Ramdon
+            // 
+            this.Ramdon.AutoSize = true;
+            this.Ramdon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ramdon.ForeColor = System.Drawing.Color.White;
+            this.Ramdon.Location = new System.Drawing.Point(80, 12);
+            this.Ramdon.Name = "Ramdon";
+            this.Ramdon.Size = new System.Drawing.Size(326, 46);
+            this.Ramdon.TabIndex = 10;
+            this.Ramdon.Text = "Jugador Ramdon";
+            this.Ramdon.Visible = false;
             // 
             // Jugador
             // 
@@ -207,18 +220,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Ramdon
-            // 
-            this.Ramdon.AutoSize = true;
-            this.Ramdon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ramdon.ForeColor = System.Drawing.Color.White;
-            this.Ramdon.Location = new System.Drawing.Point(80, 12);
-            this.Ramdon.Name = "Ramdon";
-            this.Ramdon.Size = new System.Drawing.Size(326, 46);
-            this.Ramdon.TabIndex = 10;
-            this.Ramdon.Text = "Jugador Ramdon";
-            this.Ramdon.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -227,6 +228,7 @@
             this.Controls.Add(this.Juego);
             this.Controls.Add(this.Jugar);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Piedra Papel Tijera";
